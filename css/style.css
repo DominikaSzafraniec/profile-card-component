@@ -10,6 +10,9 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -36,13 +39,50 @@ body {
 }
 
 .bg-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   top: -50%;
-  left: -10%;
+  left: -50%;
 }
 
 .bg-bottom {
   bottom: -50%;
-  right: -60%;
+  right: -50%;
+}
+
+.card {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 100;
+  overflow: hidden;
+}
+.card__bg-top {
+  height: 150px;
+  background-image: url("../images/bg-pattern-card.svg");
+}
+.card__bg-bottom {
+  position: relative;
+  height: 350px;
+}
+.card__img {
+  position: absolute;
+  top: -14%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100;
+  border: 6px solid white;
+  border-radius: 50%;
+}
+.card__img img {
+  border-radius: 50%;
 }
 
 .footer {

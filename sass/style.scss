@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  // display: flex;
+  display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
@@ -32,14 +32,49 @@ body {
 }
 
 .bg-top {
+  display: flex;
+  justify-content: end;
   top: -50%;
-  left: -10%;
+  left: -50%;
 }
 
 .bg-bottom {
   bottom: -50%;
   // left: 50%;
-  right: -60%;
+  right: -50%;
+}
+
+.card {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 100;
+  overflow: hidden;
+
+  &__bg-top {
+    height: 150px;
+    background-image: url('../images/bg-pattern-card.svg');
+  }
+
+  &__bg-bottom {
+    position: relative;
+    height: 350px;
+  }
+
+  &__img {
+    position: absolute;
+    top: -14%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    border: 6px solid white;
+    border-radius: 50%;
+    img {
+      border-radius: 50%;
+    } 
+  }
 }
 
 
